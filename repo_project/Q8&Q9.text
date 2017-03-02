@@ -1,0 +1,14 @@
+
+Q8:
+
+alise his = "fc -l"
+
+Q9:
+
+HISTTIMEFORMAT="%d/%m/%y %T "
+
+source ~/.bash_profile
+
+history
+      
+      

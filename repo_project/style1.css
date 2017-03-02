@@ -1,0 +1,25 @@
+ .th   {
+     
+          background-color: red;
+          color: white;
+
+       }
+       
+.img   {
+                      
+         list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif")
+      
+       }
+       
+                                                  
+ .italic {
+     
+          font-style: italic;
+        
+         }
+         
+ .AB    {
+     
+          display: inline;
+                            
+        }
