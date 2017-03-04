@@ -1,0 +1,33 @@
+
+Q3:
+Q3.1:
+
+A B
+T T  blue
+F T  blue
+T F  ----
+F F  ----
+ 
+Q3.2:
+
+
+A B
+T T  ----
+F T  green
+T F  green
+F F  green
+ 
+ 
+Q3.3
+
+A B
+T T  yellow
+F T  yellow
+T F  yellow
+F F  yellow
+ 
+Q3.4
+
+
+F T  white
+T F  white

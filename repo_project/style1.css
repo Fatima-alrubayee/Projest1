@@ -1,8 +1,12 @@
- .th   {
+.th   {
      
           background-color: red;
           color: white;
 
+       }
+.color {
+            
+         color: red;
        }
        
 .img   {
@@ -12,13 +16,13 @@
        }
        
                                                   
- .italic {
+.italic {
      
           font-style: italic;
         
          }
          
- .AB    {
+.AB    {
      
           display: inline;
                             
