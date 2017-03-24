@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <link rel="stylesheet" href="Style.css">
+ </head>
+ <style>
+   @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+                    body{background:url(http://wallpapercave.com/wp/wB2RTwY.jpg);
+                    background-attachment:fixed;
+                    background-size:cover;
+                        }
+ </style>
+    <body>
+      <div class="topnav">
+         <a href="Home.html">Home</a>
+         <a href="Gallrey.html">Gallrey</a>
+         <a class="active" href="#Contcat Us">Contact Us</a>
+        <a href="Calculator.html">Calculator</a>
+     </div><br><br>
+      <p style="color:white;">Please click her to fill out all required information..</p>
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign up</button>
+      <div id="id01" class="modal" class="container">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content animate" action="/action_page.php">
+            <div class="container">
+               <strong>First name:</strong><br>
+                 <input type="text" name="firstname" placeholder="First name"><br><br>
+               <strong>Last name:</strong><br>
+                   <input type="text" name="lastname" placeholder="last Name"><br><br>
+                    <strong>E-mail:</strong><br>
+                  <input type="email" name="email" placeholder="Enter Email"><br><br>
+                <strong>&nbsp; Gender:</strong><br>
+                     &nbsp; <input  type="radio" name="gender" value="male" checked><strong>Male</strong><br>
+                     &nbsp; <input type="radio" name="gender" value="female"><strong>Female</strong><br>
+                     &nbsp; <input type="radio" name="gender" value="other"><strong>Other</strong><br><br>
+                <strong>Birthday:</strong><br>
+                     <select id="daydropdown">  
+                    </select> 
+                    <select id="monthdropdown">
+                    </select> 
+                    <select id="yeardropdown">
+                    </select><br><br> 
+                 <input type="checkbox" name="vehicle1" value="Bike"><strong>Keep me update.</strong><br>
+                      <input type="checkbox" name="vehicle2" value="Car"><strong>By creating an account you agree to our</strong><strong> <a href="#">Terms & Privacy</a>.</strong> 
+                      <br><br>
+                    
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+         <script type="text/javascript">
+          var monthtext=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sept','Oct','Nov','Dec'];
+              function populatedropdown(dayfield, monthfield, yearfield){
+                    var today=new Date();
+                    var dayfield=document.getElementById(dayfield);
+                    var monthfield=document.getElementById(monthfield);
+                    var yearfield=document.getElementById(yearfield);
+                for (var i=0; i<31; i++)
+                    dayfield.options[i]=new Option(i, i+1);
+                    dayfield.options[today.getDate()]=new Option(today.getDate(), today.getDate(), true, true) 
+                    for (var m=0; m<12; m++)
+                        monthfield.options[m]=new Option(monthtext[m], monthtext[m])
+                        monthfield.options[today.getMonth()]=new Option(monthtext[today.getMonth()], monthtext[today.getMonth()], true, true) 
+                        var thisyear=today.getFullYear();
+                            for (var y=0; y<20; y++){
+                            yearfield.options[y]=new Option(thisyear, thisyear)
+                            thisyear+=1;
+                            }
+                    yearfield.options[0]=new Option(today.getFullYear(), today.getFullYear(), true, true)
+                    }
+
+                    // Get the modal
+                    var modal = document.getElementById('id01');
+                    
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                                    
+                
+                window.onload=function(){
+                   populatedropdown("daydropdown", "monthdropdown", "yeardropdown");
+                                        }
+        </script>
+        
+    <div class="footer">
+      <footer>
+         <p>copyright 2017 &copy; <a href="#" title="w3schools">w3schools</a></p>
+      </footer>
+    </div>
+    
+    </body>
+</html>

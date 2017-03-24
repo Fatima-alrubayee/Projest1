@@ -1,0 +1,70 @@
+<html>
+    <head>
+     <link rel="stylesheet" href="Style.css">
+ </head>
+
+ <body>
+     <div class="topnav">
+         <a href="Home.html">Home</a>
+         <a href="Gallrey.html">Gallrey</a>
+         <a  href="Contact Us.html">Contact Us</a>
+          <a class="active" href="#Calculator">Calculator</a>
+     </div><br><br>
+     <h3>Calculator</h3><br/>
+ <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+                            body{background:url(https://s-media-cache-ak0.pinimg.com/originals/1d/65/47/1d6547a7b4eb0653cc7d130986a1e36e.jpg);
+                            background-attachment:fixed;
+                            background-size:cover;
+                                }
+
+ </style>
+
+   <form Name="calc">
+    <table id="calc" border=2>
+        <tr>
+            <td colspan=5><input id="btn" name="display" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text"></td>
+            <td style="display:none"><input name="M" type="number"></td>
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="MC" OnClick="calc.M.value=''"></td>
+            <td><input id="btn" type=button value="0" OnClick="calc.display.value+='0'"></td>
+            <td><input id="btn" type=button value="1" OnClick="calc.display.value+='1'"></td>
+            <td><input id="btn" type=button value="2" OnClick="calc.display.value+='2'"></td>
+            <td><input id="btn" type=button value="+" OnClick="calc.display.value+='+'"></td>
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="MS" OnClick="calc.M.value=calc.display.value"></td>
+            <td><input id="btn" type=button value="3" OnClick="calc.display.value+='3'"></td>
+            <td><input id="btn" type=button value="4" OnClick="calc.display.value+='4'"></td>
+            <td><input id="btn" type=button value="5" OnClick="calc.display.value+='5'"></td>
+            <td><input id="btn" type=button value="-" OnClick="calc.display.value+='-'"></td>
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="MR" OnClick="calc.display.value=calc.M.value"></td>
+            <td><input id="btn" type=button value="6" OnClick="calc.display.value+='6'"></td>
+            <td><input id="btn" type=button value="7" OnClick="calc.display.value+='7'"></td>
+            <td><input id="btn" type=button value="8" OnClick="calc.display.value+='8'"></td>
+            <td><input id="btn" type=button value="x" OnClick="calc.display.value+='*'"></td>
+        </tr>
+        <tr>
+            <td><input id="btn" type=button value="M+" OnClick="calc.M.value=(Number(calc.M.value))+(Number(calc.display.value))"></td>
+            <td><input id="btn" type=button value="9" OnClick="calc.display.value+='9'"></td>
+            <td><input id="btn" type=button value="+/-" 
+
+        OnClick="calc.display.value=(calc.display.value==Math.abs(calc.display.value)?-(calc.display.value):Math.abs(calc.display.value))">
+        </td>
+        <td><input id="btn" type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td>
+        <td><input id="btn" type=button value="/" OnClick="calc.display.value+='/'"></td>
+        </tr>
+        <tr>
+        <td><input id="btn" type=button value="1/x" OnClick="calc.display.value=1/calc.display.value"></td>
+        <td><input id="btn" type=button value="." OnClick="calc.display.value+='.'"></td>
+        <td><input id="btn" type=button value="x2" OnClick="calc.display.value=Math.pow(calc.display.value,2)"></td>
+        <td><input id="btn" type=button value="√" OnClick="calc.display.value=Math.sqrt(calc.display.value)"></td>
+        <td><input id="btn" type=button value="C" OnClick="calc.display.value=''"></td>
+        </tr>
+     </table>
+   </form>
+ </body>
+</html
